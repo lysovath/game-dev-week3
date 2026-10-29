@@ -1,0 +1,84 @@
+# =========================================================================
+# Unity Generated Folders & Caches
+# =========================================================================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# =========================================================================
+# Asset Store & Package Caches
+# =========================================================================
+# Ignore imported assets from Asset Store (optional, uncomment if desired)
+# /[Aa]ssets/AssetStoreTools*
+
+# Ignore package cache
+/[Pp]ackages/packages-lock.json.bak
+
+# =========================================================================
+# Gradle & Android Builds
+# =========================================================================
+.gradle/
+/[Aa]ssets/Plugins/Android/libs/
+
+# =========================================================================
+# Xcode / iOS Builds
+# =========================================================================
+*.xcodeproj
+*.xcworkspace
+
+# =========================================================================
+# Visual Studio / VS Code / Rider / MonoDevelop
+# =========================================================================
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity VS Code Extension settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =========================================================================
+# Unity Crash Reports & Logs
+# =========================================================================
+sysinfo.txt
+*.stackdump
+
+# =========================================================================
+# OS Generated Files
+# =========================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =========================================================================
+# Build Outputs & Executables
+# =========================================================================
+*.apk
+*.aab
+*.unitypackage
+*.app
