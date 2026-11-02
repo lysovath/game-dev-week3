@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject orbPrefab;   // TODO 5: used to spawn a bonus orb
     [SerializeField] private Transform cameraTransform; // used by TODO 3 (camera follow)
 
+    [SerializeField] private GameManager gm;
+
     private Rigidbody rb;
 
     void Awake()
@@ -59,4 +61,22 @@ public class PlayerController : MonoBehaviour
     // TODO 5 (OnDestroy): when the Player is destroyed, Instantiate one
     //       bonus orbPrefab at your last position.
     // ---------------------------------------------------------------
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("You hit ");
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("You still hit");
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Orb"))
+        {
+            gm.Collect();
+            Destroy(other.gameObject);
+        }
+    }
 }
