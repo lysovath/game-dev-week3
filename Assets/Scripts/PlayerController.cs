@@ -61,6 +61,10 @@ public class PlayerController : MonoBehaviour
     // TODO 5 (OnDestroy): when the Player is destroyed, Instantiate one
     //       bonus orbPrefab at your last position.
 
+    public class PlayerController : MonoBehaviour
+    {
+    public GameObject orbPrefab;
+
     private void OnDestroy()
     {
         Instantiate(
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
             transform.position,
             Quaternion.identity
         );
+    }
     }
     // ---------------------------------------------------------------
 
