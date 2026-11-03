@@ -48,6 +48,15 @@ public class Orb : MonoBehaviour
         Debug.Log($"[Orb] Clicked → {clickColors[clickIndex]}");
     }
 
-    // NOTE: The player script collects orbs in its OnTriggerEnter. This script
-    // only handles looking pretty, being clicked, and bobbing.
+    // Task 4: Drag the orb using the mouse
+    private void OnMouseDrag()
+    {
+        float zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
+        Vector3 mouseScreenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zCoord);
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        basePosition = worldPosition;
+        transform.position = worldPosition;
+    }
+
+
 }
