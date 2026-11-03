@@ -215,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774761477671924478, guid: 1bbcf704418f0b041b5d64656c3f76ab, type: 3}
       propertyPath: m_Name
-      value: Wall (1)
+      value: SouthWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -691,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774761477671924478, guid: 1bbcf704418f0b041b5d64656c3f76ab, type: 3}
       propertyPath: m_Name
-      value: Wall (3)
+      value: WestWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -908,13 +908,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458089506}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.8009729, y: 0.036644854, z: -0.045320727, w: 0.5958571}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 73.306, y: 185.78, z: 179.064}
 --- !u!114 &1458089509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774761477671924478, guid: 1bbcf704418f0b041b5d64656c3f76ab, type: 3}
       propertyPath: m_Name
-      value: Wall (2)
+      value: EastWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1350,7 +1350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774761477671924478, guid: 1bbcf704418f0b041b5d64656c3f76ab, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: NorthWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -64,13 +64,12 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("You hit ");
+        if (collision.collider.CompareTag("Wall"))
+        {
+            Debug.Log("You hit " + collision.collider.name);
+        }
     }
 
-    void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("You still hit");
-    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Orb"))
