@@ -22,18 +22,36 @@ public class CameraFollow : MonoBehaviour
 
     [Header("Framing")]
     [SerializeField] private Vector3 offset = new Vector3(0f, 12f, -8f);
-    [SerializeField] private float followSharpness = 5f;
+    [SerializeField] private float followSharpness = 20f;
 
     [Header("Zoom (stretch)")]
     [SerializeField] private float minZoom = 6f;
     [SerializeField] private float maxZoom = 18f;
+    [SerializeField] private float zoomSpeed = 5f;
 
     void LateUpdate()
-    {
+    {   
         if (target == null) return;
 
+        
         // Follow AFTER the player moved — this is why we use LateUpdate.
         Vector3 desired = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, desired, followSharpness * Time.deltaTime);
+
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+        if (Mathf.Abs(scrollInput) > 0.01f)
+        {
+            
+            Vector3 offsetDirection = offset.normalized;
+            float currentDistance = offset.magnitude;
+
+            currentDistance -= scrollInput * zoomSpeed;
+
+            currentDistance = Mathf.Clamp(currentDistance, minZoom, maxZoom);
+
+            offset = offsetDirection * currentDistance;
+        }
+
     }
 }
