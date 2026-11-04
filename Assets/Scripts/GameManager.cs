@@ -30,9 +30,11 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         // TODO 6: replace the serialized totalOrbs with a live count:
-        // GameObject[] orbs = GameObject.FindGameObjectsWithTag("Orb");
-        // totalOrbs = orbs.Length;
-    }
+        GameObject[] orbs = GameObject.FindGameObjectsWithTag("Orb");
+        totalOrbs = orbs.Length;
+
+        Debug.Log($"[GameManager] Initialized. Total Orb found: {totalOrbs}");
+    }   
 
     public void Collect()
     {
@@ -46,5 +48,25 @@ public class GameManager : MonoBehaviour
         GUI.Label(new Rect(12, 10, 400, 30), $"Orbs collected: {collected} / {totalOrbs}", new GUIStyle(GUI.skin.label) { fontSize = 20 });
 
         // TODO 7: when collected >= totalOrbs, draw a large centered "YOU WIN!" label.
+
+        if (totalOrbs > 0 && collected >= totalOrbs)
+        {
+            GUIStyle winStyle = new GUIStyle(GUI.skin.label)
+            {
+                fontSize = 48,
+                fontStyle = FontStyle.Bold,
+                alignment = TextAnchor.MiddleCenter
+            };
+            winStyle.normal.textColor = Color.yellow;
+
+            float bannerWidth = 400f;
+            float bannerHeight = 100f;
+            float x = (Screen.width - bannerWidth) / 2f;
+            float y = (Screen.height - bannerHeight) / 2f;
+
+            GUI.Label(new Rect(x, y, bannerWidth, bannerHeight), "YOU WIN!", winStyle);
+
+        }
+
     }
 }
